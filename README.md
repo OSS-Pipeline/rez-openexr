@@ -1,3 +1,4 @@
-# rez-openexr
+rez-openexr
+===
 
 Rez build configuration for OpenEXR.
