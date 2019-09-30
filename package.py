@@ -23,7 +23,13 @@ variants = [
 ]
 
 tools = [
-    "openexr"
+    "exrenvmap",
+    "exrheader",
+    "exrmakepreview",
+    "exrmaketiled",
+    "exrmultipart",
+    "exrmultiview",
+    "exrstdattr"
 ]
 
 build_system = "cmake"
