@@ -7,7 +7,7 @@ include(ExternalProject)
 # OpenEXR
 rez_set_archive(
     OPENEXR_URL openexr/openexr-${REZ_BUILD_PROJECT_VERSION}.tar.gz
-    https://download-mirror.savannah.gnu.org/releases/openexr/openexr-2.2.1.tar.gz
+    https://github.com/openexr/openexr/archive/v${REZ_BUILD_PROJECT_VERSION}.tar.gz
 )
 
 # The environment variable REZ_TMP_PATH is meant to point to a location such as "/tmp/rez".
