@@ -19,10 +19,12 @@ set(BUILD_DIR ${EXTRACT_DIR}/OpenEXR/build)
 # If necessary, it is possible to skip one of these steps by replacing the command
 # by "", an empty string.
 ExternalProject_Add(
-    BUILD_OPENEXR
+    REZ_OPENEXR
     URL ${OPENEXR_URL}
     PREFIX openexr
     SOURCE_DIR ${EXTRACT_DIR}
+    PATCH_COMMAND ""
+    UPDATE_COMMAND ""
     CONFIGURE_COMMAND bash ${CMAKE_SOURCE_DIR}/configure.sh ${EXTRACT_DIR} ${BUILD_DIR}
     BUILD_COMMAND bash ${CMAKE_SOURCE_DIR}/build.sh ${BUILD_DIR}
     INSTALL_COMMAND bash ${CMAKE_SOURCE_DIR}/install.sh ${BUILD_DIR}
