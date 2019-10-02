@@ -16,12 +16,22 @@ echo -e "\n"
 echo -e "[BUILD][ARGS] BUILD PATH: ${BUILD_PATH}"
 echo -e "[BUILD][ARGS] OPENEXR VERSION: ${OPENEXR_VERSION}"
 
-cd ${BUILD_PATH}
+# We check if the arguments variables we need are correctly set.
+# If not, we abort the process.
+if [[ -z ${BUILD_PATH} || -z ${OPENEXR_VERSION} ]]; then
+    echo -e "\n"
+    echo -e "[BUILD][ARGS] One or more of the argument variables are empty. Aborting..."
+    echo -e "\n"
+
+    exit 1
+fi
 
 # We build OpenEXR.
 echo -e "\n"
 echo -e "[BUILD] Building OpenEXR-${OPENEXR_VERSION}..."
 echo -e "\n"
+
+cd ${BUILD_PATH}
 
 make -j${REZ_BUILD_THREAD_COUNT}
 

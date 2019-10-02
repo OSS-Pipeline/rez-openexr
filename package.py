@@ -12,9 +12,9 @@ description = \
     """
 
 requires = [
-    "gcc-6",
-    "cmake-3",
-    "boost-1.61.0",
+    "gcc-6+",
+    "cmake-3+",
+    "boost-1.61",
     "numpy-1.12.1"
 ]
 
@@ -37,10 +37,14 @@ build_system = "cmake"
 with scope("config") as config:
     config.build_thread_count = "logical_cores"
 
-#TODO: Use the SHA1 of the archive instead.
-uuid = "openexr-2.4.0"
+uuid = "openexr-{version}".format(version=str(version))
 
 def commands():
     env.PATH.prepend("{root}/bin")
     env.LD_LIBRARY_PATH.prepend("{root}/lib64")
     env.PYTHONPATH.prepend("{root}/lib64/python2.7/site-packages")
+
+    # Helper environment variables.
+    env.OPENEXR_BINARY_PATH.set("{root}/bin")
+    env.OPENEXR_INCLUDE_PATH.set("{root}/include")
+    env.OPENEXR_LIBRARY_PATH.set("{root}/lib64")
