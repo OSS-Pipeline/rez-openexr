@@ -14,7 +14,8 @@ description = \
 requires = [
     "cmake-3+",
     "gcc-6+",
-    "ilmbase-{version}".format(version=str(version))
+    "ilmbase-{version}".format(version=str(version)),
+    "zlib-1.2+"
 ]
 
 variants = [
