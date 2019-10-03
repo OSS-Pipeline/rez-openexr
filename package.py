@@ -12,8 +12,8 @@ description = \
     """
 
 requires = [
-    "gcc-6+",
     "cmake-3+",
+    "gcc-6+",
     "ilmbase-{version}".format(version=str(version))
 ]
 
