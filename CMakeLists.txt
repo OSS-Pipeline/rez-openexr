@@ -12,7 +12,7 @@ rez_set_archive(
 
 # The environment variable REZ_TMP_PATH is meant to point to a location such as "/tmp/rez".
 set(EXTRACT_DIR $ENV{REZ_TMP_PATH}/openexr/${REZ_BUILD_PROJECT_VERSION})
-set(BUILD_DIR ${EXTRACT_DIR}/OpenEXR/build)
+set(BUILD_DIR ${EXTRACT_DIR}/OpenEXR)
 
 # We configure/build/install OpenEXR through the ExternalProject_Add macro,
 # using three different shell scripts for each of these steps.
