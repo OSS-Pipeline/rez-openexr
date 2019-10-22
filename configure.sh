@@ -40,9 +40,9 @@ cd ${BUILD_PATH}
 ${BUILD_PATH}/bootstrap
 ${BUILD_PATH}/configure \
     --prefix=${INSTALL_PATH} \
+    CFLAGS="-fPIC" \
+    CXXFLAGS="-fPIC" \
     --with-pic \
-    CFLAGS=-fPIC \
-    CXXFLAGS=-fPIC \
     --with-ilmbase-prefix=${REZ_ILMBASE_ROOT}
 
 echo -e "\n"
